@@ -6,3 +6,6 @@ export const inputToListAsync = async (
   const text = await file.text();
   return text.split(/\r?\n/);
 };
+
+export const removeElementAtIndex = <T>(arr: T[], index: number): T[] =>
+  arr.filter((_, i) => i !== index);
