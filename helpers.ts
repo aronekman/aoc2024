@@ -18,3 +18,15 @@ export const readInputFile = async (
 
 export const removeElementAtIndex = <T>(arr: T[], index: number): T[] =>
   arr.filter((_, i) => i !== index);
+
+export const swapElements = <T>(
+  arr: T[],
+  index1: number,
+  index2: number
+): T[] => {
+  const newArray = [...arr];
+
+  [newArray[index1], newArray[index2]] = [newArray[index2], newArray[index1]];
+
+  return newArray;
+};
